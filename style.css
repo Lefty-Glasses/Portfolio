@@ -1,0 +1,249 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-family: Roboto, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: blueviolet;
+}
+
+.container{
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    background-image: url(img/1.png);
+    background-repeat: no-repeat;
+    background-position: 0 bottom;
+}
+
+/* BARRA DE NAVEGACION */
+header{
+    display: flex;
+    margin-top: 15px;
+    margin-left: 30px;
+    margin-right: 30px;
+    justify-content: space-between;
+}
+.correo{
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+}
+.navlink{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 20px;
+    padding: 10px;
+    font-size: 25px;
+    border-radius: 6px;
+    transition: ease-out 0.2s;
+}
+.gh:hover{
+    box-shadow: inset 0 -60px 0 0 #222222;
+}
+.in:hover{
+    box-shadow: inset 0 -60px 0 0 #1658ae;
+}
+
+/* TARJETA DE PRESENTACION */
+.tarjetas{
+    display: flex;    
+    margin-top: 50px;
+}
+section .sobremi{
+    display: flex;
+    width: 65%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: white;
+    border-radius: 20px;
+    height: 40vh;
+}
+.foto{
+    width: 30%;
+}
+.bio{
+    width: 70%;
+}
+.bio h1, .bio h2{
+    text-align: center;
+}
+.bio h1{
+    font-size: 40px;
+    font-weight: bolder;
+    margin-top: 15px;
+}
+.bio h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+.bio p{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    width: 80%;
+    font-size: 24px;
+}
+.foto{
+    border-radius: 20px 0 0 20px;
+    background-image: url(img/selfie.jpg);
+    background-size: cover;
+}
+section .cv{
+    width: 20%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+}
+.cv h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.cv div{
+    margin: 10px auto 0 auto;
+    text-align: center;
+    width: 70%;
+    padding: 10px;
+    font-size: 18px;
+    border-width: 6px;
+    transition: ease-out 0.2s;
+}
+.cv div:hover{
+    box-shadow: inset 0 -60px 0 0 rgb(245, 222, 90);;
+}
+.cv div a{
+    color: black;
+    text-decoration: none;
+}
+
+/* CARRUSEL */
+.slide-content{
+    margin: 5%;
+}
+
+.card{
+    width: 50px;
+    border-radius: 25px;
+    background-color: white;
+}
+
+.cardlink{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    border-radius: 0 0 25px 25px;
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+    font-weight: 900;
+    transition: ease-out 0.2s;
+}
+.cardlink:hover{
+    box-shadow: inset 0 -60px 0 0 rgb(245, 222, 90);
+}
+
+.card-image{
+    position: relative;
+    height: 150px;
+    width: auto;
+}
+.card-image .card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 25px 25px 0 0;
+}
+
+@media (max-width: 480px) {
+    header{
+        display: block;
+        justify-content: center;
+    }
+    .correo{
+        margin-bottom: 25px;
+    }
+    header nav{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    header nav a{
+        justify-content: center;
+    }
+    .tarjetas{
+        display: block;    
+        margin-top: 25px;
+        height: auto;
+    }
+    section .sobremi{
+        display: block;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: white;
+        border-radius: 20px;
+        height: auto;
+        padding: 10px;
+    }
+    .foto{
+        height: 150px;
+        width: 150px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .bio{
+        width: 100%;
+    }
+    .bio h1, .bio h2{
+        text-align: center;
+    }
+    .bio h1{
+        font-size: 28px;
+        font-weight: bolder;
+        margin-top: 15px;
+    }
+    .bio h2{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .bio p{
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: justify;
+        width: 95%;
+        font-size: 18px;
+    }
+    .foto{
+        border-radius: 20px;
+    }
+
+    section .cv{
+        display: block;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: white;
+        border-radius: 20px;
+        height: auto;
+        margin-top: 25px;
+    }
+    .cv div{
+        width: 50%;
+    }
+    .slide-content{
+        margin-top: 25px;
+        margin-bottom: 50px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
